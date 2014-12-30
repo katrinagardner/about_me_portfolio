@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+</head>
+<style>
+
+body{
+  background-color:snow;
+}
+header {
+  border: 5px pink groove;
+  background-color: yellow;
+  font-family:'Poiret One', cursive;
+  text-align:center;
+  font-size:30px;
+  width:250px;
+  margin:auto;
+  height:80px;
+  border-radius:10px;
+  margin-top:20px;
+  padding-bottom:20px;
+}
+
+input{
+  border-color:orange;
+  padding:8px;
+  border-radius:5px;
+
+}
+
+div{
+  font-family:'Poiret One', cursive;
+  margin-left:450px;
+}
+button{
+  padding:10px;
+  border-radius:5px;
+  font-size:12px;
+  background-color:lavender;
+}
+
+footer{
+  position:absolute;
+  bottom:10px;
+  width:100%;
+  left:20px;
+  margin-left:650px;
+}
+
+#add{
+  margin-left:180px;
+  padding:15px;
+}
+#substract{
+  padding:15px;
+}
+#multiply{
+  padding:15px;
+}
+#divide{
+  padding:15px;
+}
+#answer{
+margin-left:200px;
+text-align:center;
+
+}
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <h3>Calculator</h3>
+</header>
+
+<br>
+<br>
+<br>
+
+<div>
+Fitsr number: <input type="text" id="number1" >
+Second number: <input type="text" id="number2">
+</div>
+<br>
+<br>
+<br>
+
+<div>
+<button id="add" onclick="addnum()"> + </button>
+<button id="substract" onclick="subtractnum()"> - </button>
+<button id="multiply" onclick="multiplynum()"> x </button>
+<button id="divide" onclick="dividenum()"> / </button>
+</div>
+
+<br>
+<br>
+
+<div>
+<input id="answer" placeholder="Answer"></input>
+</div>
+
+
+
+<script>
+
+//var number1=parseInt(document.querySelector("#number1").value);
+//var number2=parseInt(document.querySelector("#number2").value);
+
+// var add=document.querySelector("#add");
+// var substract=document.querySelector("#substract");
+// var multiply=document.querySelector("#multiply");
+// var divide=document.querySelector("#divide");
+
+// var ans=document.querySelector("#result");
+
+var addnum = function() {
+  var firstnum=parseInt(document.querySelector("#number1").value);
+  var secondnum=parseInt(document.querySelector("#number2").value);
+  var sum = firstnum + secondnum;
+  answer.value = sum;
+}
+
+var subtractnum = function () {
+
+  var firstnum = parseInt(document.querySelector("#number1").value);
+  var secondnum = parseInt(document.querySelector("#number2").value);
+
+  var differ = firstnum-secondnum;
+  answer.value = differ;
+}
+
+var dividenum = function () {
+
+  var firstnum = parseInt(document.querySelector("#number1").value);
+  var secondnum = parseInt(document.querySelector("#number2").value);
+  if (firstnum===0 || secondnum===0){
+    alert("error");
+  };
+
+  var divd = firstnum/secondnum;
+  answer.value = divd;
+}
+
+var multiplynum = function () {
+
+  var firstnum = parseInt(document.querySelector("#number1").value);
+  var secondnum = parseInt(document.querySelector("#number2").value);
+
+  var times = firstnum*secondnum;
+  answer.value=times;
+}
+
+</script>
+
+<footer>Copyright@2014</footer>
+</body>
+</html>
