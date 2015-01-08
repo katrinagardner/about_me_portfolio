@@ -1,5 +1,5 @@
 var wss = require("ws").Server;
-var server = new wss({port:3000});
+var server = new wss({port:2000});
 var clients = [];
 var history = [];
 server.on("connection", function(ws){

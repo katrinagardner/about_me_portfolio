@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://localhost:3000"); //ws://katrina.princesspeach.nyc:3000
+var ws = new WebSocket("ws://104.236.70.122:2000/"); //ws://katrina.princesspeach.nyc:3000
 var body = document.querySelector("body");
 var ul = document.createElement("ul");
 body.appendChild(ul);
